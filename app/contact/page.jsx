@@ -51,7 +51,7 @@ function Contact() {
               <p className="text-white/60">
                 Let&apos;s work together to create something amazing. I am
                 dedicated to delivering high-quality results and ensuring client
-                satisfaction. Let's turn your vision into reality.
+                satisfaction. Let&apos;s turn your vision into reality.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Input type="firstname" placeholder="Firstname" />
