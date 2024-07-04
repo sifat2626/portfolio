@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Photo from "@/components/Photo";
 import Socials from "@/components/Socials";
 import Stats from "@/components/Stats";
@@ -17,10 +18,10 @@ function page() {
               <span className="text-accent">Ashraful Sifat</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white mt-4">
-              I am a passionate web developer with a solid foundation in HTML,
-              CSS, JavaScript, React and NodeJs. I am eager to create intuitive
-              and responsive digital experiences and continuously improve my
-              skills in modern web technologies.
+              I&apos;m a passionate web developer skilled in HTML, CSS,
+              JavaScript, React, and Node.js. I create intuitive, responsive
+              digital experiences and constantly refine my skills in modern web
+              technologies.
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <Link href={"/assets/CV_Ashraful_Alam_CSE.pdf"} target="_blank">
@@ -44,6 +45,7 @@ function page() {
         </div>
       </div>
       <Stats />
+      <Footer />
     </section>
   );
 }
