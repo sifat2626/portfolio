@@ -1,24 +1,24 @@
 import Link from "next/link";
-import { FaGithub, FaLinkedinIn, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
 const iconStyle =
   "w-9 h-9 border p-1 border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500";
 const socials = [
   {
     icon: <FaGithub className={iconStyle} />,
-    path: "",
+    path: "https://github.com/sifat2626",
   },
   {
     icon: <FaLinkedinIn className={iconStyle} />,
-    path: "",
+    path: "https://www.linkedin.com/in/ashraful-sifat-ash26/",
   },
   {
-    icon: <FaYoutube className={iconStyle} />,
-    path: "",
+    icon: <FaFacebook className={iconStyle} />,
+    path: "https://www.facebook.com/ashraful.shifat/",
   },
   {
     icon: <FaTwitter className={iconStyle} />,
-    path: "",
+    path: "/",
   },
 ];
 function Socials({ containerStyles, iconStyles }) {
