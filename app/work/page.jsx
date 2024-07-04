@@ -19,9 +19,14 @@ const projects = [
   {
     num: "01",
     category: "full stack",
-    title: "project 1",
+    title: "ClayZen",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, illum incidunt corrupti assumenda iste ab. Aliquam blanditiis expedita consequuntur atque.",
+      "Welcome to ClayZen, your ultimate destination for discovering exquisite artisanal creations!",
+    features: [
+      "Seamless CRUD operations for craft items",
+      "Browse craft subcategories easily",
+      "User-specific access control for privacy",
+    ],
     stack: [
       { name: "Html 5" },
       { name: "Css 3" },
@@ -33,15 +38,22 @@ const projects = [
       { name: "MongoDB" },
     ],
     image: "/",
-    live: "",
-    github: "",
+    live: "https://travel-guru-a9df2.web.app/",
+    github: "https://github.com/sifat2626/crafty-client",
   },
   {
     num: "02",
     category: "full stack",
-    title: "project 1",
+    title: "TieTheKnot",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, illum incidunt corrupti assumenda iste ab. Aliquam blanditiis expedita consequuntur atque.",
+      "Welcome to TieTheKnot, your premier destination for navigating the realm of matrimonial opportunities!",
+    features: [
+      "Extensive biodata listings with diverse profiles",
+      "Advanced search functionality for finding matches",
+      "User-friendly dashboard for profile management",
+      "Add to favorites for quick access to profiles",
+      "Comprehensive admin dashboard for management",
+    ],
     stack: [
       { name: "Html 5" },
       { name: "Css 3" },
@@ -53,15 +65,22 @@ const projects = [
       { name: "MongoDB" },
     ],
     image: "/",
-    live: "",
-    github: "",
+    live: "https://tietheknot-3a6f0.web.app/",
+    github: "https://github.com/sifat2626/matrimony-client",
   },
   {
     num: "03",
     category: "frontend",
-    title: "project 1",
+    title: "Gable",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, illum incidunt corrupti assumenda iste ab. Aliquam blanditiis expedita consequuntur atque.",
+      "Welcome to Gable, your premier destination for navigating the realm of professional opportunities!",
+
+    features: [
+      "Comprehensive job listings across various industries",
+      "Advanced search functionality to find relevant jobs",
+      "User-friendly dashboard for tracking applications",
+      "Blog creation and management",
+    ],
     stack: [
       { name: "Html 5" },
       { name: "Css 3" },
@@ -71,19 +90,19 @@ const projects = [
       { name: "Firebase" },
     ],
     image: "/",
-    live: "",
-    github: "",
+    live: "https://webby-522d9.web.app/",
+    github: "https://github.com/sifat2626/job-portal-client",
   },
   {
     num: "04",
     category: "frontend",
-    title: "project 1",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, illum incidunt corrupti assumenda iste ab. Aliquam blanditiis expedita consequuntur atque.",
+    title: "OmniFood",
+    description: "Your ultimate meal planner and delivery app!",
+    features: ["Choose recipe for your preffered diet!"],
     stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "JavaScript" }],
     image: "/",
-    live: "",
-    github: "",
+    live: "https://sifat2626.github.io/OmniFood/",
+    github: "https://github.com/sifat2626/OmniFood",
   },
 ];
 function Work() {
