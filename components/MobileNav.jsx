@@ -38,7 +38,7 @@ function MobileNav() {
         {/* logo */}
         <div className="mt-32 mb-40 text-accent text-2xl">
           <Link href={"/"}></Link>
-          <h1 className="text-4xl font-semibold">
+          <h1 className="text-4xl font-semibold flex justify-center ">
             Sifat <span className="text-accent">.</span>
           </h1>
         </div>
