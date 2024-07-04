@@ -16,7 +16,11 @@ function Header() {
         <div className="hidden xl:flex items-center gap-8">
           <Nav />
           <Link href={"/contact"}></Link>
-          <Button>Hire me</Button>
+          <Button>
+            <Link href={"https://www.linkedin.com/in/ashraful-sifat-ash26/"}>
+              Hire me
+            </Link>
+          </Button>
         </div>
 
         {/* Mobile Nav */}
