@@ -30,14 +30,11 @@ const projects = [
     stack: [
       { name: "Html 5" },
       { name: "Css 3" },
-      { name: "JavaScript" },
       { name: "React.js" },
       { name: "Tailwind" },
       { name: "Node.js" },
-      { name: "Express.js" },
-      { name: "MongoDB" },
     ],
-    image: "/",
+    image: "/assets/Images/crafty.png",
     live: "https://travel-guru-a9df2.web.app/",
     github: "https://github.com/sifat2626/crafty-client",
   },
@@ -57,14 +54,11 @@ const projects = [
     stack: [
       { name: "Html 5" },
       { name: "Css 3" },
-      { name: "JavaScript" },
       { name: "Tailwind" },
       { name: "React.js" },
       { name: "Node.js" },
-      { name: "Express.js" },
-      { name: "MongoDB" },
     ],
-    image: "/",
+    image: "/assets/Images/matrimoni.png",
     live: "https://tietheknot-3a6f0.web.app/",
     github: "https://github.com/sifat2626/matrimony-client",
   },
@@ -89,7 +83,7 @@ const projects = [
       { name: "React.js" },
       { name: "Firebase" },
     ],
-    image: "/",
+    image: "/assets/Images/gable.png",
     live: "https://webby-522d9.web.app/",
     github: "https://github.com/sifat2626/job-portal-client",
   },
@@ -100,7 +94,7 @@ const projects = [
     description: "Your ultimate meal planner and delivery app!",
     features: ["Choose recipe for your preffered diet!"],
     stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "JavaScript" }],
-    image: "/",
+    image: "/assets/Images/omnifood.png",
     live: "https://sifat2626.github.io/OmniFood/",
     github: "https://github.com/sifat2626/OmniFood",
   },
@@ -128,12 +122,19 @@ function Work() {
                 {project.num}
               </div>
               <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
-                {project.category}
+                {project.title}
               </h2>
               <p className="text-white/60">{project.description}</p>
-              <ul className="grid grid-cols-2 xl:grid-cols-4">
+              <ul className="-mt-6 list-disc pl-5">
+                {project.features?.map((feature, index) => (
+                  <li key={index} className="text-sm col-span-1 mt-0.5">
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <ul className="flex gap-2">
                 {project.stack?.map((item, index) => (
-                  <li key={index} className="text-accent text-xl col-span-1">
+                  <li key={index} className="text-accent text-sm col-span-1">
                     {item.name}
                     {index !== project.stack.length - 1 && ","}
                   </li>

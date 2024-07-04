@@ -49,8 +49,9 @@ function Contact() {
             <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
               <h3 className="text-4xl text-accent">Let&apos;s work together</h3>
               <p className="text-white/60">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Deserunt ratione saepe consequuntur accusantium aspernatur.
+                Let&apos;s work together to create something amazing. I am
+                dedicated to delivering high-quality results and ensuring client
+                satisfaction. Let's turn your vision into reality.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Input type="firstname" placeholder="Firstname" />
