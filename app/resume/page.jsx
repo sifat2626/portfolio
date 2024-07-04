@@ -21,7 +21,7 @@ import { SiMongodb, SiPostman, SiTailwindcss } from "react-icons/si";
 const about = {
   title: "About me",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ut nam neque iure? Non, rerum reprehenderit? Voluptatum dolores perspiciatis consequuntur, quis veritatis dicta modi sint.",
+    "I am dedicated to continuous learning and professional growth in the field of web development.",
   info: [
     {
       fieldName: "Name",
@@ -50,36 +50,12 @@ const about = {
   ],
 };
 
-// const experience = {
-//   icon: "",
-//   title: "My experience",
-//   description:
-//     "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae, molestias.",
-//   items: [
-//     {
-//       institution: "Programming Hero",
-//       topic: "Frontend Development",
-//       duration: "6 months",
-//     },
-//     {
-//       institution: "Ostad",
-//       topic: "Backend Development",
-//       duration: "7 months",
-//     },
-//   ],
-// };
-
-const education = {
+const experience = {
   icon: "",
-  title: "My education",
+  title: "My experience",
   description:
-    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae, molestias.",
+    "Certified Web Developer at Programming Hero (6 months) and Certified Backend Developer at Ostad (7 months).",
   items: [
-    {
-      institute: "Faridpur Engineering College",
-      degree: "B.Sc in CSE",
-      duration: "2019-2024",
-    },
     {
       institute: "Programming Hero",
       degree: "Certified Web Developer",
@@ -93,10 +69,24 @@ const education = {
   ],
 };
 
+const education = {
+  icon: "",
+  title: "My education",
+  description:
+    "I have completed my B.Sc in CSE from Faridpur Engineering College",
+  items: [
+    {
+      institute: "Faridpur Engineering College",
+      degree: "B.Sc in CSE",
+      duration: "2019-2024",
+    },
+  ],
+};
+
 const skills = {
   title: "My skills",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ipsam, velit repellat sapiente vero ut.",
+    "I am skilled in HTML, CSS, JavaScript, and modern frameworks like React and Node.js, with certifications in web and backend development.",
   skillList: [
     {
       icon: <FaHtml5 />,
@@ -150,6 +140,7 @@ function Resume() {
         >
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
             <TabsTrigger value="skills">Skills</TabsTrigger>
+            <TabsTrigger value="experience">Experience</TabsTrigger>
             <TabsTrigger value="education">Education</TabsTrigger>
             <TabsTrigger value="about">About me</TabsTrigger>
           </TabsList>
@@ -181,6 +172,33 @@ function Resume() {
                     </li>
                   ))}
                 </ul>
+              </div>
+            </TabsContent>
+            <TabsContent value="experience" className="w-full">
+              <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                <h3 className="text-4xl">{experience.title}</h3>
+                <p className="max-w-[600px] mx-auto text-white/60 xl:mx-0">
+                  {experience.description}
+                </p>
+                <ScrollArea className="h-[400px]">
+                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-[30px]">
+                    {experience.items.map((item, index) => (
+                      <li
+                        key={index}
+                        className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                      >
+                        <span className="text-accent">{item.duration}</span>
+                        <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                          {item.degree}
+                        </h3>
+                        <div className="flex items-center gap-3">
+                          <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+                          <p className="text-white/60">{item.institute}</p>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </ScrollArea>
               </div>
             </TabsContent>
             <TabsContent value="education" className="w-full">
