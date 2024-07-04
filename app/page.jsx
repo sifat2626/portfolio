@@ -17,8 +17,10 @@ function page() {
               <span className="text-accent">Ashraful Sifat</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white mt-4">
-              I excel at crafting elegant digital experiences and I am
-              proficient in various programming languages and technologies.
+              I am a passionate web developer with a solid foundation in HTML,
+              CSS, JavaScript, React and NodeJs. I am eager to create intuitive
+              and responsive digital experiences and continuously improve my
+              skills in modern web technologies.
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <Link href={"/assets/CV_Ashraful_Alam_CSE.pdf"} target="_blank">
