@@ -8,28 +8,28 @@ const services = [
     num: "01",
     title: "Web Design",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum, illo.",
+      "Crafting visually stunning and user-friendly web designs tailored to your brand.",
     href: "/",
   },
   {
     num: "02",
     title: "Frontend Development",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, obcaecati?",
+      "Building responsive and interactive user interfaces with cutting-edge technologies.",
     href: "/",
   },
   {
     num: "03",
     title: "Backend Development",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, obcaecati?",
+      "Developing robust and scalable server-side applications to power your web services.",
     href: "/",
   },
   {
     num: "04",
     title: "Game Development",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, obcaecati?",
+      "Creating engaging and immersive game experiences for various platforms.",
     href: "/",
   },
 ];
