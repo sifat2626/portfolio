@@ -24,7 +24,12 @@ function page() {
               technologies.
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Link href={"/assets/CV_Ashraful_Alam_CSE.pdf"} target="_blank">
+              <Link
+                href={
+                  "https://drive.google.com/file/d/11pnqi2OVQ8QXn2dy0esTP27mWclblOMQ/view?usp=sharing"
+                }
+                target="_blank"
+              >
                 <Button
                   variant="outline"
                   size="lg"
