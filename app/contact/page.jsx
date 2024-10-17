@@ -1,6 +1,5 @@
 "use client";
 import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
-
 import { Input } from "@/components/ui/input";
 import {
   Select,
@@ -34,6 +33,7 @@ const info = [
     description: "Dhaka, Bangladesh",
   },
 ];
+
 function Contact() {
   const [formData, setFormData] = useState({
     firstname: "",
@@ -59,11 +59,16 @@ function Contact() {
     e.preventDefault();
     setLoading(true);
 
+    const combinedData = {
+      ...formData,
+      from_name: `${formData.firstname} ${formData.lastname}`, // Combine firstname and lastname
+    };
+
     emailjs
       .send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID, // Service ID
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID, // Template ID
-        formData, // Form data
+        combinedData, // Form data
         process.env.NEXT_PUBLIC_EMAILJS_USER_ID // User ID
       )
       .then(
