@@ -24,10 +24,11 @@ function page() {
                 <span className="text-accent">Ashraful Sifat</span>
               </h1>
               <p className="max-w-[500px] mx-auto xl:mx-0 mb-6 text-white/80 text-sm sm:text-base leading-relaxed">
-                I&apos;m a passionate web developer skilled in HTML, CSS,
-                JavaScript, React, and Node.js. I create intuitive, responsive
-                digital experiences and constantly refine my skills in modern
-                web technologies.
+                I&apos;m a passionate Backend Developer skilled in Node.js,
+                Express.js, MongoDB, PostgreSQL, React, and Next.js. I build
+                scalable, high-performance web applications, focus on system
+                design and problem-solving, and continuously refine my skills in
+                modern web technologies.
               </p>
 
               {/* CTA Section */}

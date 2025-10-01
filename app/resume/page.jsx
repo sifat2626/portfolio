@@ -8,8 +8,10 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip"
 import { motion } from "framer-motion"
-import { FaCss3, FaHtml5, FaJs, FaNodeJs, FaReact } from "react-icons/fa"
+import { FaCss3, FaHtml5, FaJs, FaNode, FaReact } from "react-icons/fa"
 import { SiMongodb, SiPostman, SiTailwindcss, SiDocker } from "react-icons/si"
+import { BiLogoPostgresql } from "react-icons/bi"
+import { RiNextjsFill } from "react-icons/ri"
 import { FaCode } from "react-icons/fa6"
 
 const about = {
@@ -89,14 +91,14 @@ const skills = {
     "Skilled in backend development with expertise in Node.js, Express.js, and MongoDB. Proficient in JavaScript, React, Next.js, PostgreSQL, Docker, and modern development tools.",
   skillList: [
     { icon: <FaJs />, name: "javascript" },
-    { icon: <FaNodeJs />, name: "node.js" },
+    { icon: <FaNode />, name: "node.js" },
     { icon: <SiMongodb />, name: "mongo db" },
     { icon: <SiDocker />, name: "docker" },
     { icon: <SiPostman />, name: "postman" },
     { icon: <FaReact />, name: "react.js" },
-    { icon: <SiTailwindcss />, name: "tailwind.css" },
-    { icon: <SiDocker />, name: "postgresql" }, // You can swap the icon with a Postgres one if you have
-    { icon: <FaReact />, name: "next.js" }, // Using React icon as placeholder
+    // { icon: <SiTailwindcss />, name: "tailwind.css" },
+    { icon: <RiNextjsFill />, name: "next.js" },
+    { icon: <BiLogoPostgresql />, name: "postgresql" }, // You can swap the icon with a Postgres one if you have
   ],
 }
 
