@@ -1,23 +1,44 @@
-"use client";
-import { animate, motion } from "framer-motion";
+"use client"
+import { animate, motion } from "framer-motion"
 
-import "swiper/css";
-import { BsArrowUpRight, BsGithub } from "react-icons/bs";
-import { useState } from "react";
-import Link from "next/link";
+import "swiper/css"
+import { BsArrowUpRight, BsGithub } from "react-icons/bs"
+import { useState } from "react"
+import Link from "next/link"
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip";
-import { Swiper, SwiperSlide } from "swiper/react";
-import Image from "next/image";
-import WorkSliderBtns from "@/components/WorkSliderBtns";
+} from "@/components/ui/tooltip"
+import { Swiper, SwiperSlide } from "swiper/react"
+import Image from "next/image"
+import WorkSliderBtns from "@/components/WorkSliderBtns"
 
 const projects = [
   {
     num: "01",
+    category: "full stack",
+    title: "Study Companion",
+    description:
+      "A tutoring platform where students upload tasks, tutors bid, and students select tutors to complete assignments.",
+    features: [
+      "Implemented real-time messaging with Socket.io for smooth communication between students and tutors",
+      "Built secure REST APIs for authentication, task management, and payment workflow",
+    ],
+    stack: [
+      { name: "Node.js" },
+      { name: "Express.js" },
+      { name: "Prisma" },
+      { name: "MongoDB" },
+      { name: "Socket.io" },
+    ],
+    image: "/assets/Images/study-companion.png", // Replace with actual image path
+    live: "https://studycompanion.online/", // Replace with actual live link
+    github: "https://github.com/sifat2626/study-companion",
+  },
+  {
+    num: "02",
     category: "full stack",
     title: "ClayZen",
     description:
@@ -39,7 +60,7 @@ const projects = [
     github: "https://github.com/sifat2626/crafty-client",
   },
   {
-    num: "02",
+    num: "03",
     category: "full stack",
     title: "TieTheKnot",
     description:
@@ -63,12 +84,11 @@ const projects = [
     github: "https://github.com/sifat2626/matrimony-client",
   },
   {
-    num: "03",
+    num: "04",
     category: "frontend",
     title: "Gable",
     description:
       "Welcome to Gable, your premier destination for navigating the realm of professional opportunities!",
-
     features: [
       "Comprehensive job listings across various industries",
       "Advanced search functionality to find relevant jobs",
@@ -88,23 +108,24 @@ const projects = [
     github: "https://github.com/sifat2626/job-portal-client",
   },
   {
-    num: "04",
+    num: "05",
     category: "frontend",
     title: "OmniFood",
     description: "Your ultimate meal planner and delivery app!",
-    features: ["Choose recipe for your preffered diet!"],
+    features: ["Choose recipe for your preferred diet!"],
     stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "JavaScript" }],
     image: "/assets/Images/omnifood.png",
     live: "https://sifat2626.github.io/OmniFood/",
     github: "https://github.com/sifat2626/OmniFood",
   },
-];
+]
+
 function Work() {
-  const [project, setProject] = useState(projects[0]);
+  const [project, setProject] = useState(projects[0])
   const handleSlideChange = (swiper) => {
-    const currentIndex = swiper.activeIndex;
-    setProject(projects[currentIndex]);
-  };
+    const currentIndex = swiper.activeIndex
+    setProject(projects[currentIndex])
+  }
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -206,7 +227,7 @@ function Work() {
         </div>
       </div>
     </motion.section>
-  );
+  )
 }
 
-export default Work;
+export default Work
