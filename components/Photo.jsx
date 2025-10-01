@@ -25,7 +25,7 @@ function Photo() {
             priority
             quality={100}
             fill
-            alt="Profile"
+            alt="Ashraful Sifat - Professional Backend Developer Profile Photo"
             className="object-cover rounded-full"
           />
         </motion.div>

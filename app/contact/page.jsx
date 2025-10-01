@@ -1,6 +1,26 @@
-"use client";
-import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
-import { Input } from "@/components/ui/input";
+"use client"
+import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa"
+
+export const metadata = {
+  title: "Contact - Get In Touch",
+  description:
+    "Contact Ashraful Sifat for web development projects, backend solutions, and collaboration opportunities. Based in Dhaka, Bangladesh. Available for freelance and full-time opportunities.",
+  keywords: [
+    "Contact Backend Developer",
+    "Hire Web Developer",
+    "Freelance Developer Bangladesh",
+    "Web Development Contact",
+    "Node.js Developer Contact",
+    "Ashraful Sifat Contact",
+  ],
+  openGraph: {
+    title: "Contact - Get In Touch | Ashraful Sifat",
+    description:
+      "Contact me for web development projects and backend solutions. Let's work together to build something amazing.",
+    url: "https://ashraful-sifat.vercel.app/contact",
+  },
+}
+import { Input } from "@/components/ui/input"
 import {
   Select,
   SelectContent,
@@ -9,12 +29,12 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
-import emailjs from "emailjs-com";
-import { useState } from "react";
+} from "@/components/ui/select"
+import { Textarea } from "@/components/ui/textarea"
+import { Button } from "@/components/ui/button"
+import { motion } from "framer-motion"
+import emailjs from "emailjs-com"
+import { useState } from "react"
 
 const info = [
   {
@@ -32,7 +52,7 @@ const info = [
     title: "Address",
     description: "Dhaka, Bangladesh",
   },
-];
+]
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -42,27 +62,27 @@ function Contact() {
     phone: "",
     service: "",
     message: "",
-  });
+  })
 
-  const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(false);
-  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false)
+  const [success, setSuccess] = useState(false)
+  const [error, setError] = useState(false)
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
-    });
-  };
+    })
+  }
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    setLoading(true);
+    e.preventDefault()
+    setLoading(true)
 
     const combinedData = {
       ...formData,
       from_name: `${formData.firstname} ${formData.lastname}`, // Combine firstname and lastname
-    };
+    }
 
     emailjs
       .send(
@@ -73,17 +93,17 @@ function Contact() {
       )
       .then(
         (response) => {
-          console.log("SUCCESS!", response.status, response.text);
-          setLoading(false);
-          setSuccess(true);
+          console.log("SUCCESS!", response.status, response.text)
+          setLoading(false)
+          setSuccess(true)
         },
         (err) => {
-          console.log("FAILED...", err);
-          setLoading(false);
-          setError(true);
+          console.log("FAILED...", err)
+          setLoading(false)
+          setError(true)
         }
-      );
-  };
+      )
+  }
 
   return (
     <motion.section
@@ -212,7 +232,7 @@ function Contact() {
         </div>
       </div>
     </motion.section>
-  );
+  )
 }
 
-export default Contact;
+export default Contact

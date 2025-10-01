@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://ashraful-sifat.vercel.app/sitemap.xml
+
+# Block access to admin areas (if any)
+Disallow: /admin/
+Disallow: /api/
+
+# Allow access to all public pages
+Allow: /
+Allow: /services
+Allow: /work
+Allow: /resume
+Allow: /contact
+
+# Crawl-delay (optional - helps prevent server overload)
+Crawl-delay: 1
