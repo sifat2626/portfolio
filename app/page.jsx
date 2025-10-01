@@ -7,39 +7,6 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { FiDownload } from "react-icons/fi"
 
-export const metadata = {
-  title: "Ashraful Sifat - Backend Developer & Full Stack Engineer",
-  description:
-    "Passionate Backend Developer skilled in Node.js, Express.js, MongoDB, PostgreSQL, React, and Next.js. Building scalable, high-performance web applications with focus on system design and modern technologies.",
-  keywords: [
-    "Ashraful Sifat",
-    "Backend Developer",
-    "Full Stack Developer",
-    "Node.js Developer",
-    "JavaScript Developer",
-    "MongoDB Developer",
-    "PostgreSQL Developer",
-    "React Developer",
-    "Next.js Developer",
-    "Web Developer Bangladesh",
-    "System Design",
-  ],
-  openGraph: {
-    title: "Ashraful Sifat - Backend Developer & Full Stack Engineer",
-    description:
-      "Passionate Backend Developer building scalable web applications with Node.js, React, and modern technologies.",
-    url: "https://ashraful-sifat.vercel.app",
-    images: [
-      {
-        url: "/assets/Images/profile-img.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Ashraful Sifat - Backend Developer Profile",
-      },
-    ],
-  },
-}
-
 function page() {
   return (
     <div className="h-[calc(100vh-110px)] flex flex-col overflow-hidden">
