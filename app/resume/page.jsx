@@ -1,60 +1,48 @@
-"use client";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+"use client"
+import { ScrollArea } from "@/components/ui/scroll-area"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip";
-import { motion } from "framer-motion";
-import {
-  FaCss3,
-  FaHtml5,
-  FaJs,
-  FaNodeJs,
-  FaReact,
-  faHtml5,
-} from "react-icons/fa";
-import { SiMongodb, SiPostman, SiTailwindcss } from "react-icons/si";
+} from "@/components/ui/tooltip"
+import { motion } from "framer-motion"
+import { FaCss3, FaHtml5, FaJs, FaNodeJs, FaReact } from "react-icons/fa"
+import { SiMongodb, SiPostman, SiTailwindcss, SiDocker } from "react-icons/si"
+import { FaCode } from "react-icons/fa6"
 
 const about = {
   title: "About me",
   description:
-    "I am dedicated to continuous learning and professional growth in the field of web development.",
+    "Backend Developer — passionate about problem-solving and building scalable, high-performance web applications. Dedicated to continuous learning with a strong focus on Node.js, Docker, and system design.",
   info: [
-    {
-      fieldName: "Name",
-      fieldValue: "Ashraful Sifat",
-    },
-    {
-      fieldName: "Phone",
-      fieldValue: "(+880) 1303 291 451",
-    },
-    {
-      fieldName: "Experience",
-      fieldValue: "12+ months",
-    },
-    {
-      fieldName: "Nationality",
-      fieldValue: "Bangladeshi",
-    },
-    {
-      fieldName: "Languages",
-      fieldValue: "Bengali, English",
-    },
-    {
-      fieldName: "Email",
-      fieldValue: "ashrafulsifat26@gmail.com",
-    },
+    { fieldName: "Name", fieldValue: "Ashraful Sifat" },
+    { fieldName: "Phone", fieldValue: "(+880) 1303 291 451" },
+    { fieldName: "Experience", fieldValue: "1+ year" },
+    { fieldName: "Nationality", fieldValue: "Bangladeshi" },
+    { fieldName: "Languages", fieldValue: "Bengali, English" },
+    { fieldName: "Email", fieldValue: "ashrafulsifat26@gmail.com" },
   ],
-};
+}
 
 const experience = {
-  icon: "",
   title: "My experience",
   description:
-    "Certified Web Developer at Programming Hero (6 months) and Certified Backend Developer at Ostad (7 months).",
+    "Currently working as a Backend Developer focusing on Node.js, REST APIs, authentication, and scalable system design.",
+  items: [
+    {
+      institute: "SM Technology",
+      degree: "Backend Developer",
+      duration: "2024 - Present",
+    },
+  ],
+}
+
+const courses = {
+  title: "Courses & Certifications",
+  description:
+    "Completed professional certifications to strengthen my web development and backend expertise.",
   items: [
     {
       institute: "Programming Hero",
@@ -67,61 +55,50 @@ const experience = {
       duration: "7 months",
     },
   ],
-};
+}
 
 const education = {
-  icon: "",
   title: "My education",
   description:
-    "I have completed my B.Sc in CSE from Faridpur Engineering College",
+    "Completed B.Sc in Computer Science & Engineering with a focus on software development and problem-solving.",
   items: [
     {
       institute: "Faridpur Engineering College",
       degree: "B.Sc in CSE",
-      duration: "2019-2024",
+      duration: "2019 - 2024",
     },
   ],
-};
+}
+
+const problemSolving = {
+  title: "Problem Solving",
+  description:
+    "I actively practice problem-solving to strengthen my algorithms and data structure skills.",
+  items: [
+    { platform: "LeetCode", link: "https://leetcode.com/u/bAnduOVIZQ/" },
+    {
+      platform: "Codeforces",
+      link: "https://codeforces.com/profile/ash_sifat26",
+    },
+  ],
+}
 
 const skills = {
   title: "My skills",
   description:
-    "I am skilled in HTML, CSS, JavaScript, and modern frameworks like React and Node.js, with certifications in web and backend development.",
+    "Skilled in backend development with expertise in Node.js, Express.js, and MongoDB. Proficient in JavaScript, React, Next.js, PostgreSQL, Docker, and modern development tools.",
   skillList: [
-    {
-      icon: <FaHtml5 />,
-      name: "html 5",
-    },
-    {
-      icon: <FaCss3 />,
-      name: "css 3",
-    },
-    {
-      icon: <SiTailwindcss />,
-      name: "tailwind.css",
-    },
-    {
-      icon: <FaJs />,
-      name: "javascript",
-    },
-    {
-      icon: <FaReact />,
-      name: "react.js",
-    },
-    {
-      icon: <FaNodeJs />,
-      name: "node.js",
-    },
-    {
-      icon: <SiMongodb />,
-      name: "mongo db",
-    },
-    {
-      icon: <SiPostman />,
-      name: "postman",
-    },
+    { icon: <FaJs />, name: "javascript" },
+    { icon: <FaNodeJs />, name: "node.js" },
+    { icon: <SiMongodb />, name: "mongo db" },
+    { icon: <SiDocker />, name: "docker" },
+    { icon: <SiPostman />, name: "postman" },
+    { icon: <FaReact />, name: "react.js" },
+    { icon: <SiTailwindcss />, name: "tailwind.css" },
+    { icon: <SiDocker />, name: "postgresql" }, // You can swap the icon with a Postgres one if you have
+    { icon: <FaReact />, name: "next.js" }, // Using React icon as placeholder
   ],
-};
+}
 
 function Resume() {
   return (
@@ -141,11 +118,14 @@ function Resume() {
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
             <TabsTrigger value="skills">Skills</TabsTrigger>
             <TabsTrigger value="experience">Experience</TabsTrigger>
+            <TabsTrigger value="courses">Courses</TabsTrigger>
             <TabsTrigger value="education">Education</TabsTrigger>
+            <TabsTrigger value="problemSolving">Problem Solving</TabsTrigger>
             <TabsTrigger value="about">About me</TabsTrigger>
           </TabsList>
-          {/* content */}
+
           <div className="min-h-[70vh] w-full">
+            {/* Skills */}
             <TabsContent value="skills" className="w-full">
               <div className="flex flex-col gap-[30px]">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
@@ -174,6 +154,8 @@ function Resume() {
                 </ul>
               </div>
             </TabsContent>
+
+            {/* Experience */}
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl">{experience.title}</h3>
@@ -201,6 +183,34 @@ function Resume() {
                 </ScrollArea>
               </div>
             </TabsContent>
+
+            {/* Courses */}
+            <TabsContent value="courses" className="w-full">
+              <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                <h3 className="text-4xl">{courses.title}</h3>
+                <p className="max-w-[600px] mx-auto text-white/60 xl:mx-0">
+                  {courses.description}
+                </p>
+                <ScrollArea className="h-[400px]">
+                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-[30px]">
+                    {courses.items.map((item, index) => (
+                      <li
+                        key={index}
+                        className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                      >
+                        <span className="text-accent">{item.duration}</span>
+                        <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                          {item.degree}
+                        </h3>
+                        <p className="text-white/60">{item.institute}</p>
+                      </li>
+                    ))}
+                  </ul>
+                </ScrollArea>
+              </div>
+            </TabsContent>
+
+            {/* Education */}
             <TabsContent value="education" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl">{education.title}</h3>
@@ -218,16 +228,40 @@ function Resume() {
                         <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
                           {item.degree}
                         </h3>
-                        <div className="flex items-center gap-3">
-                          <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                          <p className="text-white/60">{item.institute}</p>
-                        </div>
+                        <p className="text-white/60">{item.institute}</p>
                       </li>
                     ))}
                   </ul>
                 </ScrollArea>
               </div>
             </TabsContent>
+
+            {/* Problem Solving */}
+            <TabsContent value="problemSolving" className="w-full">
+              <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                <h3 className="text-4xl">{problemSolving.title}</h3>
+                <p className="max-w-[600px] mx-auto text-white/60 xl:mx-0">
+                  {problemSolving.description}
+                </p>
+                <ul className="flex flex-col xl:flex-row gap-6 mt-6 justify-center xl:justify-start">
+                  {problemSolving.items.map((item, index) => (
+                    <li key={index}>
+                      <a
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 bg-[#232329] py-3 px-6 rounded-xl hover:bg-accent hover:text-black transition-colors"
+                      >
+                        <FaCode className="text-2xl" />
+                        <span>{item.platform}</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </TabsContent>
+
+            {/* About */}
             <TabsContent
               value="about"
               className="w-full text-center xl:text-left"
@@ -238,7 +272,7 @@ function Resume() {
                   {about.description}
                 </p>
                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
-                  {about.info?.map((item, index) => (
+                  {about.info.map((item, index) => (
                     <li
                       key={index}
                       className="flex items-center justify-center xl:justify-start gap-4"
@@ -254,7 +288,7 @@ function Resume() {
         </Tabs>
       </div>
     </motion.div>
-  );
+  )
 }
 
-export default Resume;
+export default Resume
