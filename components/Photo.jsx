@@ -1,6 +1,6 @@
-"use client";
-import { motion } from "framer-motion";
-import Image from "next/image";
+"use client"
+import { motion } from "framer-motion"
+import Image from "next/image"
 
 function Photo() {
   return (
@@ -21,7 +21,7 @@ function Photo() {
           className="w-[298px] h-[298px] xl:w-[298px] xl:h-[298px] mix-blend-lighten"
         >
           <Image
-            src={"/assets/Images/profile-img.png"}
+            src={"/assets/Images/profile-img.jpg"}
             priority
             quality={100}
             fill
@@ -31,7 +31,7 @@ function Photo() {
         </motion.div>
       </motion.div>
     </div>
-  );
+  )
 }
 
-export default Photo;
+export default Photo
