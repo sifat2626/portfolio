@@ -1,7 +1,7 @@
-import Link from "next/link";
-import Nav from "./Nav";
-import { Button } from "./ui/button";
-import MobileNav from "./MobileNav";
+import Link from "next/link"
+import Nav from "./Nav"
+import { Button } from "./ui/button"
+import MobileNav from "./MobileNav"
 
 function Header() {
   return (
@@ -17,7 +17,7 @@ function Header() {
           <Nav />
           <Link href={"/contact"}></Link>
           <Button>
-            <Link href={"https://www.linkedin.com/in/ashraful-sifat-ash26/"}>
+            <Link href={"https://www.linkedin.com/in/md-ashraful-alam-sifat/"}>
               Hire me
             </Link>
           </Button>
@@ -29,7 +29,7 @@ function Header() {
         </div>
       </div>
     </header>
-  );
+  )
 }
 
-export default Header;
+export default Header
